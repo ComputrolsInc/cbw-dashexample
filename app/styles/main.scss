@@ -1,0 +1,285 @@
+@import "font-awesome-4.3.0/scss/font-awesome";
+
+$color-black-primary: #272727;
+$color-black-secondary: #2f2f2f;
+$color-black-third: #222;
+
+$color-blue-water: #2296bb;
+$color-yellow-electricity: #eaba49;
+$color-green-money: #0b9160;
+$color-green-energy: #2bb673;
+
+$color-orange-marker: rgba(255, 127, 0, 0.8);
+
+$color-white-primary: #ededed;
+$color-white-secondary: #BCD5D5;
+
+$background-color: $color-black-primary;
+
+body {
+    background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5 {
+    color: $color-white-primary;
+}
+
+main.dash {
+    width: 75%;
+    margin: 0 auto;
+
+    .dash_logo {
+        height: 65px;
+    }
+
+    .dash_location {
+        box-sizing: border-box;
+        width: 100%;
+
+        // &:before {
+        //     height: 10px;
+        //     content: ' ';
+        //     background-image: linear-gradient(90deg, $color-orange-marker 0%, $color-orange-marker 100%);
+        //     display: block;
+        // }
+
+        border: 5px solid $color-orange-marker;
+        // border-right: 10px solid $color-orange-marker;
+
+        .dash_location--name, 
+        .dash_location--occupants, 
+        .dash_location--date {
+            color: $color-white-secondary;
+            text-transform: uppercase;
+            width: 33%;
+            padding: 15px;
+            display: inline-block;
+            box-sizing:border-box;
+            text-align: center;
+            font-size: 1.1em;
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+    .dash_interchanging {
+
+        min-height: 500px;
+        background-color: $color-black-secondary;
+    }
+
+    .dash_statistics {
+        &:before {
+            height: 10px;
+            content: ' ';
+            background-image: linear-gradient(90deg, $color-blue-water 0%, $color-blue-water 33%, 
+                $color-blue-water 33%, $color-green-energy 33%, $color-green-energy 66%, 
+                $color-green-energy 66%, $color-yellow-electricity 66%, $color-yellow-electricity 100%);
+            display: block;
+        }
+
+        min-height: 250px;
+        background-color: $color-black-third;
+
+        .statistics_water,
+        .statistics_green,
+        .statistics_electricity {  
+            min-height: 250px;        
+            width: 32%;
+            float: left;
+
+            img {
+                padding-top: 5px;
+                display: block;
+                margin: 0 auto;
+                height: 60px;
+            }
+
+            h4 {
+                margin: 5px 0;
+                text-align: center;
+            }
+
+            .statistics_water--container,
+            .statistics_green--container,
+            .statistics_electricity--container {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .statistics_water {
+            h4 {
+               color: $color-blue-water; 
+            }
+        }
+
+        .statistics_green {
+
+            h4, i {
+                color: $color-green-energy;    
+            }
+
+            span {
+                color: $color-white-secondary;
+            }
+            
+            i {
+                padding-top: 5px;
+            }
+            span, i{
+                font-size: 2.2em;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .statistics_electricity {
+            // h4, span{
+            //     color: $color-yellow-electricity;
+            // }
+
+            // span {
+            //     font-size: 2.2em;
+            //     display: block;
+            //     text-align:center;
+            //     padding-top: 30px;
+            // }
+            
+        }
+    }
+
+    .dash_savings {
+        min-height: 500px;
+        background-color: $color-black-third;
+        width: 100%;
+        &:before {
+            height: 10px;
+            content: ' ';
+            background-image: linear-gradient(90deg, $color-green-money 0%, $color-green-money 100%);
+            display: block;
+        }
+
+        .dash_savings--iconheader {
+            width: 31%;
+            img {
+                padding: 5px 0 0 0;
+                display: block;
+                margin: 0 auto;
+                height: 80px;
+            }
+
+            h4 {
+                color: $color-green-money;
+                text-align:center;
+                margin: 0;
+                padding-top: 0;
+            }
+
+            &:after {
+                content: ' ';
+                visibility: hidden;
+                display: block;
+                clear: right;
+            }
+        }
+
+    }
+
+
+    svg.linechart {
+        .axis {
+            path,
+            line {
+                fill: none;
+                stroke: #000;
+                shape-rendering: crispEdges;
+            }
+
+            text {
+                fill: rgb(102, 102, 102);
+            }
+
+            .tick {
+                line {
+                    stroke: rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+
+        .area {
+            stroke-width: 1;
+        }
+
+        // .axis path,
+        // .axis line {
+        //   fill: none;
+        //   stroke: #000;
+        //   shape-rendering: crispEdges;
+        // }
+
+        // .axis text {
+        //   fill: #000;
+        // }
+
+        // .axis .tick line {
+        //   stroke: rgba(0, 0, 0, 0.1);
+        // }
+
+        .area {
+          stroke-width: 1;
+        }
+
+        .area.outer,
+        .legend .outer {
+          fill: rgba(230, 230, 255, 0.8);
+          stroke: rgba(216, 216, 255, 0.8);
+        }
+
+        .area.inner,
+        .legend .inner {
+          fill: rgba(127, 127, 255, 0.8);
+          stroke: rgba(96, 96, 255, 0.8);
+        }
+
+        .median-line,
+        .legend .median-line {
+          fill: none;
+          stroke: #000;
+          stroke-width: 3;
+        }
+
+        .legend .legend-bg {
+          fill: rgba(0, 0, 0, 0.5);
+          stroke: rgba(0, 0, 0, 0.5);
+        }
+
+        .marker.client .marker-bg,
+        .marker.client path {
+          fill: rgba(255, 127, 0, 0.8);
+          stroke: rgba(255, 127, 0, 0.8);
+          stroke-width: 3;
+        }
+
+        .marker.server .marker-bg,
+        .marker.server path {
+          fill: rgba(0, 153, 51, 0.8);
+          stroke: rgba(0, 153, 51, 0.8);
+          stroke-width: 3;
+        }
+
+        .marker path {
+          fill: none;
+        }
+
+        .legend text,
+        .marker text {
+          fill: #fff;
+          font-weight: bold;
+        }
+
+        .marker text {
+          text-anchor: middle;
+        }
+    }
+}
