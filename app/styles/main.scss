@@ -31,6 +31,9 @@ main.dash {
 
     .dash_appbar {
          min-height: 75px;
+         background-color: $color-black-secondary;
+         border-bottom: 2px solid $color-white-secondary;
+
         .dash_appbar--logo {
             width: 10%;
             float: left;
