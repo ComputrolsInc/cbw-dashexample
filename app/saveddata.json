@@ -1,0 +1,52 @@
+[
+  {
+    "day": "1st",
+    "current": 5.00,
+    "last": 4.75
+  },
+  {
+    "day": "2nd",
+    "current": 2.75,
+    "last": 3.50
+  },
+  {
+    "day": "3rd",
+    "current": 6.50,
+    "last": 2.15
+  },
+  {
+    "day": "4th",
+    "current": 8.25,
+    "last": 2.75
+  },
+  {
+    "day": "5th",
+    "current": 7.35,
+    "last": 2.05
+  },
+  {
+    "day": "6th",
+    "current": 5.43,
+    "last": 3.15
+  },
+  {
+    "day": "7th",
+    "current": 3.15,
+    "last": 4.75
+  },
+  {
+    "day": "8th",
+    "current": 13.25,
+    "last": 4.15
+  },
+  {
+    "day": "9th",
+    "current": 11.00,
+    "last": 8.50
+  },
+  {
+    "day": "10th",
+    "current": 9.75,
+    "last": 7.50
+  }
+]

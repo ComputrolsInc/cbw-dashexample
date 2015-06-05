@@ -170,8 +170,43 @@ main.dash {
             .savings_total {
                 width: 33%;
                 float: left;
+                min-height: 160px;
 
             }
+
+            .savings_price,
+            .savings_total {
+                color: $color-white-secondary;
+
+                span {
+                    display: block;
+                    text-align:center;
+                    vertical-align: middle;
+                }
+
+                span:nth-child(1) {
+                    font-size: 1.8em;
+                    padding-top: 55px;
+                }
+
+                span:nth-child(2){
+                    text-transform: uppercase;
+                }
+
+                // .price_label,
+                // .total_label {
+                //     color: $color-green-money;
+                // }
+            }
+            // .savings_price .price_data,
+            // .savings_total .total_data {
+            //     color: $color-white-primary;
+            // }
+
+            // .savings_price .price_label,
+            // .savings_total .total_data {
+            //     color: $color-white-primary;
+            // }
 
             .savings_iconheader--svg,
             .savings_price--svg,
