@@ -153,8 +153,8 @@ main.dash {
     }
 
     .dash_savings {
-        min-height: 500px;
-        background-color: $color-black-third;
+        min-height: 750px;
+        background-color: $color-black-secondary;
         width: 100%;
         &:before {
             height: 10px;
@@ -165,6 +165,7 @@ main.dash {
 
         .dash_savings--data {
             width: 100%;
+            min-height: 155px;
 
             .savings_iconheader,
             .savings_price,
@@ -245,6 +246,20 @@ main.dash {
             }
         }
 
+        .dash_savings--container {
+            margin: 35px;
+            text-align: center;
+            background-color: $color-black-secondary;
+            position: relative;
+
+            .dash_savings_header {
+                font-size: 1.3em;
+                position: absolute;
+                color: $color-white-secondary;
+                left: 350px;
+                top: 30px;
+            }
+        }
     }
 
 
@@ -347,7 +362,8 @@ main.dash {
     svg.dash_savings--chart {
         .x.axis,
         .y.axis {
-            fill: $color-green-money;
+            fill: darken($color-green-money, 5%);
+
         }
 
         .savings_svg--bar {
@@ -368,7 +384,7 @@ main.dash {
             .efficiency_label.bad {
                 stroke: red;
             }
-            
+
             .efficiency_label {
                 stroke: $color-white-secondary;
             }            

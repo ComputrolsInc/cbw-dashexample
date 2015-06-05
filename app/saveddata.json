@@ -36,7 +36,7 @@
   },
   {
     "day": "8th",
-    "current": 13.25,
+    "current": 11.25,
     "last": 4.15
   },
   {
@@ -48,5 +48,30 @@
     "day": "10th",
     "current": 9.75,
     "last": 7.50
+  },
+  {
+    "day": "11th",
+    "current": 7.75,
+    "last": 6.50
+  },
+  {
+    "day": "12th",
+    "current": 4.75,
+    "last": 2.50
+  },
+  {
+    "day": "13th",
+    "current": 5.75,
+    "last": 7.50
+  },
+  {
+    "day": "14th",
+    "current": 2.75,
+    "last": 4.00
+  },
+  {
+    "day": "15th",
+    "current": 3.35,
+    "last": 6.35
   }
 ]
