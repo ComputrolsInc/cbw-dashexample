@@ -36,15 +36,7 @@ main.dash {
         box-sizing: border-box;
         width: 100%;
 
-        // &:before {
-        //     height: 10px;
-        //     content: ' ';
-        //     background-image: linear-gradient(90deg, $color-orange-marker 0%, $color-orange-marker 100%);
-        //     display: block;
-        // }
-
         border: 5px solid $color-orange-marker;
-        // border-right: 10px solid $color-orange-marker;
 
         .dash_location--name, 
         .dash_location--occupants, 
@@ -112,6 +104,16 @@ main.dash {
             h4 {
                color: $color-blue-water; 
             }
+
+            .statistics_water--container {
+                position: relative;
+
+                .container_svg--fill {
+                    position: absolute;
+                    top: 110px;
+                    left: 126px;
+                }
+            }
         }
 
         .statistics_green {
@@ -160,27 +162,50 @@ main.dash {
             display: block;
         }
 
-        .dash_savings--iconheader {
-            width: 31%;
-            img {
-                padding: 5px 0 0 0;
-                display: block;
-                margin: 0 auto;
-                height: 80px;
+        .dash_savings--data {
+            width: 100%;
+
+            .savings_iconheader,
+            .savings_price,
+            .savings_total {
+                width: 33%;
+                float: left;
+
             }
 
-            h4 {
-                color: $color-green-money;
-                text-align:center;
-                margin: 0;
-                padding-top: 0;
+            .savings_iconheader--svg,
+            .savings_price--svg,
+            .savings_total--svg {
+                text {
+                    font-size: 18px;
+                }
+
+                text.label {
+                    font-size: 16px;
+                }
             }
 
-            &:after {
-                content: ' ';
-                visibility: hidden;
-                display: block;
-                clear: right;
+            .savings_price--svg,
+            .savings_total--svg {
+
+            }
+
+            .savings_iconheader--svg {
+                text {
+                    fill: $color-green-money;
+                }
+            }
+
+            .savings_price--svg {
+                text {
+                    fill: $color-green-money;
+                }
+            }
+
+            .savings_total--svg {
+                text {
+                    fill: $color-green-money;
+                }
             }
         }
 
@@ -280,6 +305,17 @@ main.dash {
 
         .marker text {
           text-anchor: middle;
+        }
+    }
+
+    svg.dash_savings--chart {
+        .x.axis,
+        .y.axis {
+            fill: $color-green-money;
+        }
+
+        .bar {
+            fill: $color-orange-marker;
         }
     }
 }

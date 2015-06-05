@@ -37,18 +37,26 @@
         <!-- Supplementary Data / counters -->
         <div class="dash_statistics">
             <div class="statistics_water">
-                <img src="images/DashboardIconscolor_Water-Cooling.png" />
-                <h4>Water Saved</h4>
                 <div class="statistics_water--container">
-                    <svg id="fillgauge" width="33%" height="100"></svg>
+                    <svg id="waterefficiency" width="100%" height="250">
+                        <image x="135" y="20" width="60" height="60" xlink:href="images/DashboardIconscolor_Water-Cooling.png"></image>
+                        <text x="125" y="95" fill="#2296bb">Water Saved</text>
+                    </svg>
+                    <div class="container_svg--fill">
+                        <svg id="fillgauge" x="135" y="-50" width="75" height="75"></svg>
+                    </div>
+                    
                 </div>
-                
             </div>
             <div class="statistics_green">
-                <img src="images/Icons_GreenEnergy.png" />
-                <h4>Green Efficiency</h4>
+<!--                 <img src="images/Icons_GreenEnergy.png" />
+                <h4>Green Efficiency</h4> -->
                 <div class="statistics_green--container">
-                    <svg id="greenefficiency" width="33%" height="100"></svg>
+                    <svg id="greenefficiency" width="100%" height="250">
+                        <image x="135" y="20" width="60" height="60" xlink:href="images/Icons_GreenEnergy.png"></image>
+                        <text x="100" y="95" fill="#2bb673">Achieved Reduction</text>
+                        <text x="145" y="140" fill="#2bb673" font-size="25px">15%</text>
+                    </svg>
                 </div>
             </div>
             <div class="statistics_electricity">
@@ -57,19 +65,34 @@
                     <text x="135" y="95" fill="#eaba49">Energy Saved</text>
                     <text x="120" y="140" fill="#eaba49" font-size="25px">105 kw/Hrs</text>
                 </svg>
-<!--                 <img src="images/DashboardIconscolor_Energy-Heating.png" />
-                <h4>Energy Saved</h4> -->
-<!--                 <div class="statistics_electricity--container">
-                    <svg id="electricefficiency" width="33%" height="100"></svg>
-                </div> -->
-
-     <!--            <span>105 kW/hrs</span> -->
             </div>
         </div>
         <div class="dash_savings">
-            <div class="dash_savings--iconheader">
-                <img src="images/DashboardIconscolor_Dollarsign.png" />
-                <h4>Savings</h4>
+            <!-- Header / Price Per kW/Hr / Total Savings -->
+            <div class="dash_savings--data">
+                <div class="savings_iconheader">
+                    <svg class="savings_iconheader--svg">
+                        <image x="128" y="35" width="60" height="60" xlink:href="images/DashboardIconscolor_Dollarsign.png"></image>
+                        <text x="128" y="110">Savings</text>
+                    </svg>
+                </div>
+                <div class="savings_total">
+                    <svg class="savings_total--svg">
+                        <text class="data" x="132" y="75">$7,525</text>
+                        <text class="label" x="116" y="100">Total Savings</text>
+                    </svg>
+                </div>
+                <div class="savings_price">
+                    <svg class="savings_price--svg">
+                        <text class="data" x="115" y="75">15.2c per kWh</text>
+                        <text class="label" x="142" y="100">Price</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- CHART SVG -->
+            <div class="dash_savings--container">
+                <svg class="dash_savings--chart" width="100%" height="250"></svg>
             </div>
         </div>
     </main>
@@ -78,5 +101,6 @@
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.7.6.js'><\/script>".replace("HOST", location.hostname));
     //]]></script>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/saved.js"></script>
   </body>
 </html>

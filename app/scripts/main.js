@@ -272,17 +272,47 @@
     var arc = d3.svg.arc()
         .startAngle(gaugeCircleX(0))
         .endAngle(gaugeCircleX(1))
-        .outerRadius(gaugeCircleY(49))
-        .innerRadius(gaugeCircleY(46));
+        .outerRadius(gaugeCircleY(99))
+        .innerRadius(gaugeCircleY(95));
 
     var svg = d3.select('#greenefficiency')
         .append("g")
-        .attr('transform','translate('+49+','+50+')')
+        .attr('transform','translate('+165+','+110+')')
         .append('g')
         .attr('class', 'green_svg--circle')
         .append('path')
         .attr('d', arc)
         .attr('fill', '#2bb673');
+
+    var waterSvg = d3.select('#waterefficiency')
+        .append("g")
+        .attr('transform','translate('+165+','+110+')')
+        .append('g')
+        .attr('class', 'water_svg--circle')
+        .append('path')
+        .attr('d', arc)
+        .attr('fill', '#2296bb');
+
+    function makeMoneySVGArc(id, fill) {
+        // Draw the outer circle.
+        var arc = d3.svg.arc()
+            .startAngle(gaugeCircleX(0))
+            .endAngle(gaugeCircleX(1))
+            .outerRadius(gaugeCircleY(55))
+            .innerRadius(gaugeCircleY(52));
+
+        d3.select('.' + id)
+            .append("g")
+            .attr('transform','translate('+160+','+80+')')
+            .append('g')
+            .attr('class', 'money_svg--circle')
+            .append('path')
+            .attr('d', arc)
+            .attr('fill', fill);
+
+            //0b9160
+            //d36c07        
+    }
 
     function makeArc(differential){
 
@@ -323,5 +353,7 @@
 
     animateArc();
 
-
+    makeMoneySVGArc('savings_iconheader--svg', '#0b9160');
+    makeMoneySVGArc('savings_price--svg', '#d36c07');
+    makeMoneySVGArc('savings_total--svg', '#d36c07');
 })();
