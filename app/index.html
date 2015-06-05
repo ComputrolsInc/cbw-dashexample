@@ -16,14 +16,24 @@
   <body>
 
     <main class="dash">
-        <img class="dash_logo" src="images/3dlogo.png" />
+        <div class="dash_appbar">
+            <div class="dash_appbar--logo">
+                <img src="images/3dlogo.png" />    
+            </div>
+            
+            <div class="dash_appbar--location">
+                <span class="location_name"><i class="icon icon-university"></i>Playa Vista Bldg #1</span>
+                <span class="location_occupants"><i class="icon icon-users"></i>575 Occupants</span>
+                <span class="location_date"><i class="icon icon-calendar"></i>June 16th, 2015</span>
+            </div>
+        </div>
         <h1>Computrols Interactive Dashboard</h1>
 
-        <div class="dash_location">
+<!--         <div class="dash_location">
             <span class="dash_location--name"><i class="icon icon-university"></i>Playa Vista Bldg #1</span>
             <span class="dash_location--occupants"><i class="icon icon-users"></i>575 Occupants</span>
             <span class="dash_location--date"><i class="icon icon-calendar"></i>June 16th, 2015</span>
-        </div>
+        </div> -->
         <!-- Interchanging Dash data -->
         <div class="dash_interchanging">
             <div class="dash_interchanging--container">
@@ -85,7 +95,12 @@
 
             <!-- CHART SVG -->
             <div class="dash_savings--container">
-                <span class="dash_savings_header">Last Month vs. This Month</span>
+                <div class="dash_savings--legend">
+                    <p class="legend_explanation--line"><span class="color">Blue</span>&nbsp;markers represent the dollars saved last month.</p>
+                    <p class="legend_explanation--green"><span class="color">Green</span>&nbsp;bars represent an <span class="color">increase</span> in dollars saved from last month.</p>
+                    <p class="legend_explanation--red"><span class="color">Red</span>&nbsp;bars represent a <span class="color">decrease</span> in dollars saved from last month.</p>
+                </div>
+                <span class="dash_savings--header">Last Month vs. This Month</span>
                 <svg class="dash_savings--chart" width="100%" height="250">
                     <defs>
                         <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">

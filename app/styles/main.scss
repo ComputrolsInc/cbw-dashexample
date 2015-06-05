@@ -29,32 +29,42 @@ main.dash {
     width: 75%;
     margin: 0 auto;
 
-    .dash_logo {
-        height: 65px;
-    }
-
-    .dash_location {
-        box-sizing: border-box;
-        width: 100%;
-
-        border: 5px solid $color-orange-marker;
-
-        .dash_location--name, 
-        .dash_location--occupants, 
-        .dash_location--date {
-            color: $color-white-secondary;
-            text-transform: uppercase;
-            width: 33%;
-            padding: 15px;
-            display: inline-block;
-            box-sizing:border-box;
-            text-align: center;
-            font-size: 1.1em;
-            i {
-                margin-right: 5px;
+    .dash_appbar {
+        margin-bottom: 35px;
+        .dash_appbar--logo {
+            width: 10%;
+            float: left;
+            img {
+                height: 65px;                
             }
         }
+
+        .dash_appbar--location {
+            box-sizing: border-box;
+            float: left;
+            width: 90%;
+
+            // border: 5px solid $color-orange-marker;
+
+            .location_name, 
+            .location_occupants, 
+            .location_date {
+                color: $color-white-secondary;
+                text-transform: uppercase;
+                width: 33%;
+                padding: 15px;
+                display: inline-block;
+                box-sizing:border-box;
+                text-align: center;
+                font-size: 1.1em;
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }        
     }
+
+
     .dash_interchanging {
 
         min-height: 500px;
@@ -252,12 +262,34 @@ main.dash {
             background-color: $color-black-secondary;
             position: relative;
 
-            .dash_savings_header {
+            .dash_savings--legend {
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+                .legend_explanation--line,
+                .legend_explanation--green,
+                .legend_explanation--red {
+                    color: $color-white-secondary;
+                }
+
+                .legend_explanation--line .color {
+                    color: steelblue;
+                }
+
+                .legend_explanation--green .color {
+                    color: $color-green-money;
+                }
+
+                .legend_explanation--red .color {
+                    color: red;
+                }
+            }
+            .dash_savings--header {
                 font-size: 1.3em;
                 position: absolute;
                 color: $color-white-secondary;
                 left: 350px;
-                top: 30px;
+                top: 130px;
             }
         }
     }
