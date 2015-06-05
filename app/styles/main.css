@@ -2576,7 +2576,21 @@ main.dash {
   main.dash svg.dash_savings--chart .y.axis {
     fill: #0b9160; }
   /* line 353, stdin */
-  main.dash svg.dash_savings--chart .bar {
+  main.dash svg.dash_savings--chart .savings_svg--bar {
     fill: rgba(255, 127, 0, 0.8); }
+  /* line 359, stdin */
+  main.dash svg.dash_savings--chart .savings_svg--efficiency .efficiency_bar.good,
+  main.dash svg.dash_savings--chart .savings_svg--efficiency .efficiency_label.good {
+    fill: #0b9160; }
+  /* line 364, stdin */
+  main.dash svg.dash_savings--chart .savings_svg--efficiency .efficiency_bar.bad,
+  main.dash svg.dash_savings--chart .savings_svg--efficiency .efficiency_label.bad {
+    fill: red; }
+  /* line 368, stdin */
+  main.dash svg.dash_savings--chart .savings_svg--efficiency .efficiency_label.bad {
+    stroke: red; }
+  /* line 372, stdin */
+  main.dash svg.dash_savings--chart .savings_svg--efficiency .efficiency_label {
+    stroke: #BCD5D5; }
 
 /*# sourceMappingURL=sass */

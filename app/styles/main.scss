@@ -350,8 +350,30 @@ main.dash {
             fill: $color-green-money;
         }
 
-        .bar {
+        .savings_svg--bar {
             fill: $color-orange-marker;
         }
+
+        .savings_svg--efficiency {
+            .efficiency_bar.good,
+            .efficiency_label.good {
+                fill: $color-green-money;
+            }
+
+            .efficiency_bar.bad,
+            .efficiency_label.bad {
+                fill: red;
+            }
+
+            .efficiency_label.bad {
+                stroke: red;
+            }
+            
+            .efficiency_label {
+                stroke: $color-white-secondary;
+            }            
+        }
+
+
     }
 }
