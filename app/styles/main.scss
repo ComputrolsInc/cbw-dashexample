@@ -30,7 +30,7 @@ main.dash {
     margin: 0 auto;
 
     .dash_appbar {
-        margin-bottom: 35px;
+         min-height: 75px;
         .dash_appbar--logo {
             width: 10%;
             float: left;

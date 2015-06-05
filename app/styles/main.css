@@ -2356,7 +2356,7 @@ main.dash {
   margin: 0 auto; }
   /* line 32, stdin */
   main.dash .dash_appbar {
-    margin-bottom: 35px; }
+    min-height: 75px; }
     /* line 34, stdin */
     main.dash .dash_appbar .dash_appbar--logo {
       width: 10%;
