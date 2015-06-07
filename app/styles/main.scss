@@ -72,6 +72,64 @@ main.dash {
 
         min-height: 500px;
         background-color: $color-black-secondary;
+
+        .dash_interchanging--nav {
+            width: 100%; 
+            min-height: 50px;
+
+            .label {
+                background-color: $color-white-secondary;
+                box-sizing: border-box;
+                float:left;
+                padding: 15px;
+                width: 33.33%;
+                text-align:center;
+                text-transform: uppercase;
+                border-bottom-width: 5px;
+                border-bottom-style: solid;
+                border-top-width: 5px;
+                border-top-style: solid;
+                border-bottom-color: $color-white-secondary;
+                color: $color-black-secondary;
+                
+                cursor: pointer;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+
+            .label.consumption {
+                border-top-color: $color-yellow-electricity;
+
+                &:hover {
+                    color: $color-yellow-electricity;
+                    border-bottom-color: $color-yellow-electricity;
+                }
+            }
+
+            .label.campus {
+                border-top-color: $color-blue-water;
+
+                &:hover {
+                    color: $color-blue-water;
+                    border-bottom-color: $color-blue-water;
+                }
+            }
+
+            .label.reduction {
+                border-top-color: $color-green-energy;
+
+                &:hover {
+                    color: $color-green-energy;
+                    border-bottom-color: $color-green-energy;
+                }
+            }
+        }
+
+        .dash_interchanging--container {
+
+        }
     }
 
     .dash_statistics {
