@@ -70,7 +70,7 @@ main.dash {
 
     .dash_interchanging {
 
-        min-height: 500px;
+        min-height: 650px;
         background-color: $color-black-secondary;
 
         .dash_interchanging--nav {
@@ -85,19 +85,16 @@ main.dash {
                 width: 33.33%;
                 text-align:center;
                 text-transform: uppercase;
-                border-bottom-width: 5px;
-                border-bottom-style: solid;
-                border-top-width: 5px;
-                border-top-style: solid;
-                border-bottom-color: $color-white-secondary;
+                border-width: 5px 0;
+                border-style: solid none;
                 color: $color-black-secondary;
-                
                 cursor: pointer;
 
                 i {
                     margin-right: 5px;
                 }
             }
+
 
             .label.consumption {
                 border-top-color: $color-yellow-electricity;
@@ -106,6 +103,11 @@ main.dash {
                     color: $color-yellow-electricity;
                     border-bottom-color: $color-yellow-electricity;
                 }
+            }
+
+            .label.consumption.active {
+                color: $color-yellow-electricity;
+                border-bottom-color: $color-yellow-electricity;
             }
 
             .label.campus {
@@ -117,6 +119,11 @@ main.dash {
                 }
             }
 
+            .label.campus.active {
+                color: $color-blue-water;
+                border-bottom-color: $color-blue-water;
+            }
+
             .label.reduction {
                 border-top-color: $color-green-energy;
 
@@ -125,10 +132,79 @@ main.dash {
                     border-bottom-color: $color-green-energy;
                 }
             }
+
+            .label.reduction.active {
+                color: $color-green-energy;
+                border-bottom-color: $color-green-energy;
+            }
         }
 
         .dash_interchanging--container {
 
+            .interchanging_data--usage {
+                width: 100%;
+
+                h4 {
+                    text-align: center;
+                }
+
+                .data_usage--meta,
+                .data_usage--chartcontainer {
+                    width: 50%;
+                    // box-sizing: border-box;
+                    float: left;
+                }
+
+                .data_usage--chartcontainer {
+                    svg.usage_chart--actual {
+                        .usage_chart--bar {
+                            fill: $color-orange-marker;
+                        }
+
+                        .x.axis,
+                        .y.axis {
+                            .tick .domain {
+                                stroke-width: 5px;
+                            }
+                        }
+
+                        .axis path
+                        .axis line {
+                            fill: none;
+                            stroke: #000;
+                            shape-rendering: crispEdges;
+                        }
+
+                        // .x.axis path {
+                        //     width: 3px;
+                        // }
+                        // .y.axis {
+                        //     fill: $color-yellow-electricity;
+                        // }
+                    }
+                }
+
+                .data_usage--meta {
+                    .usage_meta--metercontainer,
+                    .usage_meta--efficiencycontainer{
+                        float:left;
+                        box-sizing: border-box;
+                    }
+
+                    .usage_meta--metercontainer {
+                        width: 75%;
+                        padding-top: 35%;
+                    }
+
+                    .usage_meta--efficiencycontainer {
+                        width: 25%;
+                        padding-top: 35%;
+                        // svg.usage_meta--efficiency {
+
+                        // }
+                    }
+                }
+            }
         }
     }
 
@@ -265,21 +341,7 @@ main.dash {
                 span:nth-child(2){
                     text-transform: uppercase;
                 }
-
-                // .price_label,
-                // .total_label {
-                //     color: $color-green-money;
-                // }
             }
-            // .savings_price .price_data,
-            // .savings_total .total_data {
-            //     color: $color-white-primary;
-            // }
-
-            // .savings_price .price_label,
-            // .savings_total .total_data {
-            //     color: $color-white-primary;
-            // }
 
             .savings_iconheader--svg,
             .savings_price--svg,

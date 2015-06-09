@@ -18,11 +18,11 @@
     <main class="dash">
         <div class="dash_appbar">
             <div class="dash_appbar--logo">
-                <img src="images/3dlogo.png" />    
+                <img src="images/3dlogo.png" alt="Computrols" />    
             </div>
             
             <div class="dash_appbar--location">
-                <span class="location_name"><i class="icon icon-star"></i>Playa Vista Bldg #1</span>
+                <span class="location_name"><i class="icon icon-building"></i>Playa Vista Bldg #1</span>
                 <span class="location_occupants"><i class="icon icon-users"></i>575 Occupants</span>
                 <span class="location_date"><i class="icon icon-calendar"></i>June 16th, 2015</span>
             </div>
@@ -32,12 +32,42 @@
         <!-- Interchanging Dash data -->
         <div class="dash_interchanging">
             <div class="dash_interchanging--nav">
-                <div class="label campus"><i class="icon icon-university"></i>Campus Efficiency</div>
-                <div class="label reduction"><i class="icon icon-leaf"></i>Achieved Reduction</div>
-                <div class="label consumption"><i class="icon icon-bolt"></i>kW/hr Consumption</div>
+                <div id="interchanging_nav--campus" class="label campus"><i id="icon_campus" class="icon icon-university"></i>Campus Efficiency</div>
+                <div id="interchanging_nav--reduction" class="label reduction"><i id="icon_reduction" class="icon icon-leaf"></i>Achieved Reduction</div>
+                <div id="interchanging_nav--consumption" class="label consumption"><i id="icon_consumption" class="icon icon-bolt"></i>kW/hr Consumption</div>
             </div>
+
+            <!-- Interchanging Data Container -->
             <div class="dash_interchanging--container">
-                <svg id="container_svg" width="100%" height="500"></svg>
+
+                <!-- KW/HR Consumption Partial -->
+                <div class="interchanging_data--usage">
+                    <h4>Usage Statistics</h4>
+                    <div class="data_usage--chartcontainer">
+                        <svg class="usage_chart--actual" width="100%" height="500">
+                            <defs>
+                                <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+                                    <circle cx="5" cy="5" r="3" style="stroke: none; fill:steelblue;"/>
+                                </marker>
+                                <marker id="endMarker" markerWidth="10" markerHeight="10" refX="5" refY="5">
+                                    <circle id="currentConsumption" cx="5" cy="5" r="3" style="stroke: none; fill:steelblue;"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="data_usage--meta">
+                        <div class="usage_meta--metercontainer">
+                            <svg id="usage_meta--meter" width="100%" height="250">
+                                <image x="145" y="20" width="60" height="60" xlink:href="images/DashboardIconscolor_Energy-Heating.png"></image>
+                                <text x="130" y="95" fill="#eaba49">Current kW/hr</text>
+                                <text x="110" y="140" fill="#eaba49" font-size="20px">1,264,191 kw/Hrs</text>
+                            </svg>
+                        </div>
+                        <div class="usage_meta--efficiencycontainer">
+                            <svg id="usage_meta--efficiency" width="100%" height="300"></svg>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -56,8 +86,6 @@
                 </div>
             </div>
             <div class="statistics_green">
-<!--                 <img src="images/Icons_GreenEnergy.png" />
-                <h4>Green Efficiency</h4> -->
                 <div class="statistics_green--container">
                     <svg id="greenefficiency" width="100%" height="250">
                         <image x="135" y="20" width="60" height="60" xlink:href="images/Icons_GreenEnergy.png"></image>

@@ -1,0 +1,43 @@
+[
+    {
+    "hour": "8AM",
+    "consumption": 1764191,
+    "max": 1964191, 
+    "min": 1464191
+  },
+    {
+    "hour": "9AM",
+    "consumption": 1664191,
+    "max": 1665591, 
+    "min": 1564191
+  },
+    {
+    "hour": "10AM",
+    "consumption": 1764191,
+    "max": 1864191, 
+    "min": 1564191
+  },
+    {
+    "hour": "11AM",
+    "consumption": 1464191,
+    "max": 1404191, 
+    "min": 1294191
+  },
+    {
+    "hour": "12PM",
+    "consumption": 1664191,
+    "max": 1704191, 
+    "min": 1264191
+  },
+    {
+    "hour": "1PM",
+    "consumption": 1864191,
+    "max": 1984191, 
+    "min": 1824191
+  },
+  {
+    "hour": "2PM",
+    "consumption": 641910,
+    "current": 1264191
+  }
+]
