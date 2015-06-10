@@ -27,23 +27,124 @@
                 <span class="location_date"><i class="icon icon-calendar"></i>June 16th, 2015</span>
             </div>
         </div>
-        <h1>Computrols Interactive Dashboard</h1>
 
         <!-- Interchanging Dash data -->
         <div class="dash_interchanging">
             <div class="dash_interchanging--nav">
                 <div id="interchanging_nav--campus" class="label campus"><i id="icon_campus" class="icon icon-university"></i>Campus Efficiency</div>
                 <div id="interchanging_nav--reduction" class="label reduction"><i id="icon_reduction" class="icon icon-leaf"></i>Achieved Reduction</div>
-                <div id="interchanging_nav--consumption" class="label consumption"><i id="icon_consumption" class="icon icon-bolt"></i>kW/hr Consumption</div>
+                <div id="interchanging_nav--consumption" class="label consumption active"><i id="icon_consumption" class="icon icon-bolt"></i>kW/hr Consumption</div>
             </div>
 
             <!-- Interchanging Data Container -->
             <div class="dash_interchanging--container">
 
+                <!-- Campus Efficiency / Tenant Engagement -->
+                <div class="interchanging_data--campus" style="display: none;">
+                    <div class="campus_image--container">
+                        <image src="images/playavista2.png" height="350" width="420"></image>
+                    </div>
+                    <div class="campus_rankings">
+                        <h4 class="campus_rankings--header">Tenant Rankings - June</h4>
+                        <ul class="campus_rankings--list">
+                            <li class="building">
+                                
+                                <div class="building_description">
+                                    Playa Vista Bldg #1
+                                    
+                                    <span class="address"> 12015 East Waterfront Dr.</span>
+                                </div>
+                                <div class="building_metrics">
+                                    <span>
+                                        <span class="label">Grade</span>
+                                        <span class="data">A</span>
+                                    </span>
+                                    <span>
+                                        <span class="label">kW/Person</span>
+                                        <span class="data">130 kW</span>
+                                    </span>
+                                    <span> 
+                                        <span class="label">Reduction</span>
+                                        <span class="data">35%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="building">
+                                <div class="building_description">
+                                    Playa Vista Bldg #2
+                                    
+                                    <span class="address">12025 East Waterfront Dr.</span>
+                                </div>
+                                <div class="building_metrics">
+                                    <span>
+                                        <span class="label">Grade</span>
+                                        <span class="data">B</span>
+                                    </span>
+                                    <span>
+                                        <span class="label">kW/Person</span>
+                                        <span class="data">145 kW</span>
+                                    </span>
+                                    <span> 
+                                        <span class="label">Reduction</span>
+                                        <span class="data">25%</span>
+                                    </span>
+                                </div>
+
+                            </li>
+                            <li class="building">
+                                <div class="building_description">
+                                    Playa Vista Bldg #3
+                                    
+                                    <span class="address">12035 East Waterfront Dr.</span>
+                                </div>
+                                <div class="building_metrics">
+                                    <span>
+                                        <span class="label">Grade</span>
+                                        <span class="data">C</span>
+                                    </span>
+                                    <span>
+                                        <span class="label">kW/Person</span>
+                                        <span class="data">155 kW</span>
+                                    </span>
+                                    <span> 
+                                        <span class="label">Reduction</span>
+                                        <span class="data">15%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="building">
+                                <div class="building_description">
+                                    Playa Vista Bldg #4
+                                    
+                                    <span class="address">12045 East Waterfront Dr.</span>
+                                </div>
+                                <div class="building_metrics">
+                                    <span>
+                                        <span class="label">Grade</span>
+                                        <span class="data">D</span>
+                                    </span>
+                                    <span>
+                                        <span class="label">kW/Person</span>
+                                        <span class="data">165 kW</span>
+                                    </span>
+                                    <span> 
+                                        <span class="label">Reduction</span>
+                                        <span class="data">5%</span>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <!-- KW/HR Consumption Partial -->
-                <div class="interchanging_data--usage">
-                    <h4>Usage Statistics</h4>
+                <div class="interchanging_data--usage" style="display: none;">
+                
                     <div class="data_usage--chartcontainer">
+                        <div class="usage_chart--description">
+                            <span class="title">Realtime Consumption</span>
+                            <span class="goal">Goal</span>
+                        </div>
                         <svg class="usage_chart--actual" width="100%" height="500">
                             <defs>
                                 <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
@@ -64,8 +165,41 @@
                             </svg>
                         </div>
                         <div class="usage_meta--efficiencycontainer">
-                            <svg id="usage_meta--efficiency" width="100%" height="300"></svg>
+                            <span>Consumption Efficiency</span>
+                            <svg class="usage_meta--efficiency" width="100%" height="300">
+                                <defs>
+                                    <marker id="marker_triangle--start" markerWidth="8" markerHeight="8" refX="1.0" refY="2.5">
+                                        <polygon points="0,0 5,2.5 0,5" style="fill:#2296bb;" />
+                                    </marker>
+                                    <marker id="marker_triangle--end" markerWidth="8" markerHeight="8" refX="4.0" refY="2.5">
+                                        <polygon points="5,0 0,2.5 5,5" style="fill:#2296bb;" />
+                                    </marker>
+                                </defs>
+                            </svg>
                         </div>
+                    </div>
+
+                    <div class="data_usage--facts">
+                        <i class="icon icon-plug icon-2x"></i>
+                        At the current rate of consumption, 4 Los Angeles Angels games could be powered over the span of 1 hour.
+                    </div>
+                </div>
+
+                <!-- Reduction Partial -->
+                <div class="interchanging_data--reduction" style="display: block;">
+                    <div class="reduction_description">
+                        <div class="panel">
+                            <img src="images/256pxLigting.png" alt="Lighting" height="100" width="100"></img>
+                            <img src="images/256PxMetering.png" alt="Metering" height="100" width="100"></img>
+                            <img src="images/256pxHVAC.png" alt="HVAC" height="100" width="100"></img>
+                        </div>
+                        <h4>Reduction</h4>
+                        <p>The reduction is tallied on a day of month basis, with the calculation focusing from what last month on the 16th was in comparison to today.</p>
+                        
+                        <p>Reduction itself is a sum calculation of the kw/hr, gallons of water, and natural gas resources used in comparison to the goal values set forth for the property.</p>
+                    </div>
+                    <div class="reduction_metrics">
+
                     </div>
                 </div>
             </div>
@@ -99,42 +233,6 @@
                     <image x="145" y="20" width="60" height="60" xlink:href="images/DashboardIconscolor_Energy-Heating.png"></image>
                     <text x="135" y="95" fill="#eaba49">Energy Saved</text>
                     <text x="120" y="140" fill="#eaba49" font-size="25px">105 kw/Hrs</text>
-                </svg>
-            </div>
-        </div>
-        <div class="dash_savings">
-            <!-- Header / Price Per kW/Hr / Total Savings -->
-            <div class="dash_savings--data">
-                <div class="savings_iconheader">
-                    <svg class="savings_iconheader--svg">
-                        <image x="128" y="35" width="60" height="60" xlink:href="images/DashboardIconscolor_Dollarsign.png"></image>
-                        <text x="128" y="110">Savings</text>
-                    </svg>
-                </div>
-                <div class="savings_total">
-                    <span class="total_data">$7,525.13</span>
-                    <span class="total_label">Total Savings</span>
-                </div>
-                <div class="savings_price">
-                    <span class="price_data">15.2c</span>
-                    <span class="price_label">Price per kWh</span>
-                </div>
-            </div>
-
-            <!-- CHART SVG -->
-            <div class="dash_savings--container">
-                <div class="dash_savings--legend">
-                    <p class="legend_explanation--line"><span class="color">Blue</span>&nbsp;markers represent the dollars saved last month.</p>
-                    <p class="legend_explanation--green"><span class="color">Green</span>&nbsp;bars represent an <span class="color">increase</span> in dollars saved from last month.</p>
-                    <p class="legend_explanation--red"><span class="color">Red</span>&nbsp;bars represent a <span class="color">decrease</span> in dollars saved from last month.</p>
-                </div>
-                <span class="dash_savings--header">Last Month vs. This Month</span>
-                <svg class="dash_savings--chart" width="100%" height="250">
-                    <defs>
-                        <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
-                            <circle cx="5" cy="5" r="3" style="stroke: none; fill:steelblue;"/>
-                        </marker>
-                    </circle>
                 </svg>
             </div>
         </div>

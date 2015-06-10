@@ -41,7 +41,8 @@ gulp.task('sass-dev', function(){
   gulp.src('app/styles/main.scss')
     .pipe($.sass({sourceComments: 'map', sourceMap: 'sass'}))
     .pipe(gulp.dest('app/styles'))
-    .pipe($.size({title: 'sass'}));
+    .pipe($.size({title: 'sass'}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('sass', function(){
@@ -66,7 +67,8 @@ gulp.task('serve', function () {
   gulp.watch(['app/styles/**/*.scss'], ['sass-dev']);
   gulp.watch(['{.tmp,app}/styles/**/*.css'], reload);
   gulp.watch(['app/images/**/*'], reload);
-  gulp.watch(['app/**/*.js', '!app/scripts/**/*.js'], ['webpack']);
+  gulp.watch(['app/scripts/**/*.js', 'app/**/*.html'], reload);
+
 });
 
 gulp.task('develop', ['serve'], function () {

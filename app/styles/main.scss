@@ -70,8 +70,9 @@ main.dash {
 
     .dash_interchanging {
 
-        min-height: 650px;
+        min-height: 450px;
         background-color: $color-black-secondary;
+        margin-top: 25px;
 
         .dash_interchanging--nav {
             width: 100%; 
@@ -79,6 +80,7 @@ main.dash {
 
             .label {
                 background-color: $color-white-secondary;
+                // background-color: #B6642B;
                 box-sizing: border-box;
                 float:left;
                 padding: 15px;
@@ -100,13 +102,13 @@ main.dash {
                 border-top-color: $color-yellow-electricity;
 
                 &:hover {
-                    color: $color-yellow-electricity;
+                    //color: $color-yellow-electricity;
                     border-bottom-color: $color-yellow-electricity;
                 }
             }
 
             .label.consumption.active {
-                color: $color-yellow-electricity;
+                //color: $color-yellow-electricity;
                 border-bottom-color: $color-yellow-electricity;
             }
 
@@ -114,13 +116,13 @@ main.dash {
                 border-top-color: $color-blue-water;
 
                 &:hover {
-                    color: $color-blue-water;
+                    //color: $color-blue-water;
                     border-bottom-color: $color-blue-water;
                 }
             }
 
             .label.campus.active {
-                color: $color-blue-water;
+                //color: $color-blue-water;
                 border-bottom-color: $color-blue-water;
             }
 
@@ -128,18 +130,119 @@ main.dash {
                 border-top-color: $color-green-energy;
 
                 &:hover {
-                    color: $color-green-energy;
+                    //color: $color-green-energy;
                     border-bottom-color: $color-green-energy;
                 }
             }
 
             .label.reduction.active {
-                color: $color-green-energy;
+                //color: $color-green-energy;
                 border-bottom-color: $color-green-energy;
             }
         }
 
         .dash_interchanging--container {
+
+            .interchanging_data--campus {
+                min-height: 450px;
+                .campus_image--container,
+                .campus_rankings {
+                    width: 50%;
+                    float: left;
+                    box-sizing: border-box;
+                }
+
+                .campus_rankings {
+                    .campus_rankings--header {
+                        text-align: center;
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+                    }
+
+                    .campus_rankings--list {
+                        display: block;
+                        list-style-type: none;
+                        margin: 15px 0 0 0;
+                        padding: 0 15px 0 0;
+                        overflow-y: scroll;
+                        max-height: 320px;
+
+                        li {
+                            margin-top: 5px;
+                            padding: 10px 15px;
+                            background-color: $color-white-secondary;
+                            // background-color: grey;
+                            position: relative;
+                        }
+
+                        li.building {
+                            min-height: 65px;
+
+                            
+                            // &:nth-child(1){
+                            //     border-bottom: 5px solid $color-green-energy;
+                            // }
+                            border-radius: 3px;
+
+                            .building_description {
+                                z-index: 10;
+                                width: 20%;
+                                float: left;
+
+                                .address {
+                                    z-index: 1;
+                                    position: absolute;
+                                    right: 5px;
+                                    bottom: 5px;
+                                    color: $color-black-secondary;
+                                    opacity: 0.7;
+
+                                    &:hover {
+                                        opacity: 1.0;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                            .building_metrics {
+                                width: 75%;
+                                margin-left: 15px;
+                                float:left;
+                                box-sizing: border-box;
+                                
+                                > span {
+                                    width: 33%;
+                                    display: block;
+                                    float: left;
+                                    text-align: center;
+                                }
+                                
+                                .label,
+                                .data {
+                                    margin: 0 auto;
+                                }
+
+                                .label {
+                                    font-size: 1.1em;
+                                    &:after {
+                                        content: ' ';
+                                        display: block;
+                                        clear: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .campus_image--container {
+                    margin-top: 22px;
+                    padding: 5px;
+                    image {
+                        width: 420px;
+                    }
+                }
+            }
 
             .interchanging_data--usage {
                 width: 100%;
@@ -156,9 +259,38 @@ main.dash {
                 }
 
                 .data_usage--chartcontainer {
+                    position: relative;
+
+                    .usage_chart--description {
+                        position: absolute;
+                        top: 30px;
+                        left: 200px;
+                        
+                        .title {
+                            font-size: 0.9em;
+                            text-align: center;
+                            color: $color-white-secondary;
+                            text-transform: uppercase;
+                        }
+
+                        .goal {
+                            position: absolute;
+                            text-transform: uppercase;
+                            top: 145px;
+                            left: 240px;
+                            color: $color-white-secondary;
+                            font-weight: 800;
+                            font-size: 0.8em;
+                        }
+                    }
+
+
                     svg.usage_chart--actual {
                         .usage_chart--bar {
                             fill: $color-orange-marker;
+                            opacity: 0.9;
+                            stroke: $color-orange-marker;
+                            stroke-width: 2.5px;
                         }
 
                         .x.axis,
@@ -166,9 +298,12 @@ main.dash {
                             .tick .domain {
                                 stroke-width: 5px;
                             }
+
+                            fill: #666666;
                         }
 
-                        .axis path
+
+                        .axis path,
                         .axis line {
                             fill: none;
                             stroke: #000;
@@ -192,17 +327,157 @@ main.dash {
                     }
 
                     .usage_meta--metercontainer {
+                        padding-top: 10%;
+                    }
+
+                    .usage_meta--metercontainer {
                         width: 75%;
-                        padding-top: 35%;
                     }
 
                     .usage_meta--efficiencycontainer {
                         width: 25%;
-                        padding-top: 35%;
-                        // svg.usage_meta--efficiency {
+                        margin-left: -30px;
+                        padding-top: 8%;
 
-                        // }
+                        span {
+                            width: 100%;
+                            font-size: 0.8em;
+                            color: $color-white-secondary;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: -12px;
+                        }
+                        
+                        svg.usage_meta--efficiency {
+                            text {
+                                fill: rgb(102, 102, 102);
+                            }
+
+                            .axis path,
+                            .axis line {
+                                fill: none;
+                                stroke: #000;
+                                shape-rendering: crispEdges;
+                            }
+
+                            .axis .tick .domain {
+                                fill: none;
+                            }
+
+                            .usage_meta--bar-green,
+                            .usage_meta--bar-caution,
+                            .usage_meta--bar-bad {
+                                opacity: 0.8;
+                                stroke-width: 2.5px;
+                            }
+
+                            .usage_meta--bar-green {
+                                stroke: $color-green-energy;
+                            }
+
+                            .usage_meta--bar-caution {
+                                stroke: $color-yellow-electricity;
+                            }
+
+                            .usage_meta--bar-bad {
+                                stroke: red;
+                            }
+
+                        }
                     }
+                }
+
+                .data_usage--facts {
+                    &:before {
+                        display: block;
+                        content: ' ';
+                        visibility: hidden;
+                        clear: left;
+                    }
+
+                    width: 50%;
+                    margin: 0 auto;
+                    color: $color-white-secondary;
+                    font-size: 0.9em;
+                    text-align: center;
+                    line-height: 0.1em;
+                    i {
+                        margin-top: 15px;
+                        padding-right: 10px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            .interchanging_data--reduction {
+                min-height: 100%;
+
+                .reduction_description,
+                .reduction_metrics {
+                    width: 50%;
+                    box-sizing: border-box;
+                    padding: 15px;
+                    float: left;
+                    min-height: 345px;
+                }   
+
+                .reduction_description {
+                    box-sizing: border-box;
+                    position: relative;
+                    z-index: 10;
+                    
+                    .panel {
+                        background-color: $color-black-primary;
+                        position: absolute;
+                        z-index: 1;
+                        opacity: 0.6;
+                        // border: 2px solid $color-orange-marker;
+                        border: 2px solid $color-green-energy;
+                        border-radius: 5px;
+                        
+                        img{
+                            
+                            // display: block;
+
+                            // &:after {
+                            //     content: ' ';
+                            //     display: block;
+                            //     clear: both;
+                            // }
+                            float: left;
+                        }
+
+                        img {
+                            padding-top: 48%;
+                        }
+
+                        img:nth-child(1){
+                            padding-left: 13px;
+                        }
+                        img:nth-child(2), img:nth-child(3) {
+                            padding-left: 13px;
+                        }
+
+                        min-width: 100%;
+                        min-height: 100%;
+                    }
+
+                    h4 {
+                        color: $color-white-primary;
+                        padding-left: 20px;
+                    }
+
+                    p {
+                        padding-left: 20px;
+                        // font-weight: 800;
+                        z-index: 2;
+                        color: $color-white-primary;
+
+                    }
+                }
+
+                .reduction_metrics {
+
                 }
             }
         }
@@ -299,125 +574,6 @@ main.dash {
         }
     }
 
-    .dash_savings {
-        min-height: 750px;
-        background-color: $color-black-secondary;
-        width: 100%;
-        &:before {
-            height: 10px;
-            content: ' ';
-            background-image: linear-gradient(90deg, $color-green-money 0%, $color-green-money 100%);
-            display: block;
-        }
-
-        .dash_savings--data {
-            width: 100%;
-            min-height: 155px;
-
-            .savings_iconheader,
-            .savings_price,
-            .savings_total {
-                width: 33%;
-                float: left;
-                min-height: 160px;
-
-            }
-
-            .savings_price,
-            .savings_total {
-                color: $color-white-secondary;
-
-                span {
-                    display: block;
-                    text-align:center;
-                    vertical-align: middle;
-                }
-
-                span:nth-child(1) {
-                    font-size: 1.8em;
-                    padding-top: 55px;
-                }
-
-                span:nth-child(2){
-                    text-transform: uppercase;
-                }
-            }
-
-            .savings_iconheader--svg,
-            .savings_price--svg,
-            .savings_total--svg {
-                text {
-                    font-size: 18px;
-                }
-
-                text.label {
-                    font-size: 16px;
-                }
-            }
-
-            .savings_price--svg,
-            .savings_total--svg {
-
-            }
-
-            .savings_iconheader--svg {
-                text {
-                    fill: $color-green-money;
-                }
-            }
-
-            .savings_price--svg {
-                text {
-                    fill: $color-green-money;
-                }
-            }
-
-            .savings_total--svg {
-                text {
-                    fill: $color-green-money;
-                }
-            }
-        }
-
-        .dash_savings--container {
-            margin: 35px;
-            text-align: center;
-            background-color: $color-black-secondary;
-            position: relative;
-
-            .dash_savings--legend {
-                width: 50%;
-                margin: 0 auto;
-                text-align: center;
-                .legend_explanation--line,
-                .legend_explanation--green,
-                .legend_explanation--red {
-                    color: $color-white-secondary;
-                }
-
-                .legend_explanation--line .color {
-                    color: steelblue;
-                }
-
-                .legend_explanation--green .color {
-                    color: $color-green-money;
-                }
-
-                .legend_explanation--red .color {
-                    color: red;
-                }
-            }
-            .dash_savings--header {
-                font-size: 1.3em;
-                position: absolute;
-                color: $color-white-secondary;
-                left: 350px;
-                top: 130px;
-            }
-        }
-    }
-
-
     svg.linechart {
         .axis {
             path,
@@ -513,12 +669,181 @@ main.dash {
           text-anchor: middle;
         }
     }
+}
 
-    svg.dash_savings--chart {
+main.savings {
+    width: 75%;
+    margin: 0 auto;
+
+    min-height: 750px;
+    background-color: $color-black-secondary;
+
+    &:before {
+        height: 10px;
+        content: ' ';
+        background-image: linear-gradient(90deg, $color-green-money 0%, $color-green-money 100%);
+        display: block;
+    }
+
+    .savings_appbar {
+         min-height: 75px;
+         background-color: $color-black-secondary;
+         border-bottom: 2px solid $color-white-secondary;
+
+        .savings_appbar--logo {
+            width: 10%;
+            float: left;
+            img {
+                height: 65px;                
+            }
+        }
+
+        .savings_appbar--location {
+            box-sizing: border-box;
+            float: left;
+            width: 90%;
+
+            // border: 5px solid $color-orange-marker;
+
+            .location_name, 
+            .location_occupants, 
+            .location_date {
+                color: $color-white-secondary;
+                text-transform: uppercase;
+                width: 33%;
+                padding: 15px;
+                display: inline-block;
+                box-sizing:border-box;
+                text-align: center;
+                font-size: 1.1em;
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }        
+    }
+
+    .savings_data {
+        width: 100%;
+        min-height: 155px;
+
+        .savings_iconheader,
+        .savings_price,
+        .savings_total {
+            width: 33%;
+            float: left;
+            min-height: 160px;
+
+        }
+
+        .savings_price,
+        .savings_total {
+            color: $color-white-secondary;
+
+            span {
+                display: block;
+                text-align:center;
+                vertical-align: middle;
+            }
+
+            span:nth-child(1) {
+                font-size: 1.8em;
+                padding-top: 55px;
+            }
+
+            span:nth-child(2){
+                text-transform: uppercase;
+            }
+        }
+
+        .savings_iconheader--svg,
+        .savings_price--svg,
+        .savings_total--svg {
+            text {
+                font-size: 18px;
+            }
+
+            text.label {
+                font-size: 16px;
+            }
+        }
+
+        .savings_price--svg,
+        .savings_total--svg {
+
+        }
+
+        .savings_iconheader--svg {
+            text {
+                fill: $color-green-money;
+            }
+        }
+
+        .savings_price--svg {
+            text {
+                fill: $color-green-money;
+            }
+        }
+
+        .savings_total--svg {
+            text {
+                fill: $color-green-money;
+            }
+        }
+    }
+
+    .savings_container {
+        margin: 35px;
+        margin-top: 10px;
+        text-align: center;
+        background-color: $color-black-secondary;
+        position: relative;
+
+        .savings_legend {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            .legend_explanation--line,
+            .legend_explanation--green,
+            .legend_explanation--red {
+                color: $color-white-secondary;
+            }
+
+            .legend_explanation--line .color {
+                color: steelblue;
+            }
+
+            .legend_explanation--green .color {
+                color: $color-green-money;
+            }
+
+            .legend_explanation--red .color {
+                color: red;
+            }
+        }
+
+        .savings_header {
+            font-size: 1.3em;
+            position: absolute;
+            color: $color-white-secondary;
+            left: 325px;
+            top: 35px;
+        }
+    }
+
+    svg.savings_chart {
         .x.axis,
         .y.axis {
             fill: darken($color-green-money, 5%);
 
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            stroke-width: 1.5px;
+            shape-rendering: crispEdges;
         }
 
         .savings_svg--bar {
@@ -544,7 +869,5 @@ main.dash {
                 stroke: $color-white-secondary;
             }            
         }
-
-
     }
 }

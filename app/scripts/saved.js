@@ -1,7 +1,7 @@
 (function (){
     var margin = {top: 40, right: 10, bottom: 30, left: 45},
         width = 825 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+        height = 400 - margin.top - margin.bottom;
 
     var barWidth = 500;
 
@@ -24,7 +24,7 @@
         .x(function (d) {return x(d.day)})
         .y(function (d) {return y(d.last)});
 
-    var svg = d3.select('.dash_savings--chart')
+    var svg = d3.select('.savings_chart')
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
