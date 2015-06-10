@@ -79,8 +79,8 @@ main.dash {
             min-height: 50px;
 
             .label {
-                background-color: $color-white-secondary;
-                // background-color: #B6642B;
+                // background-color: $color-white-secondary;
+                background-color: #7B8B8B;
                 box-sizing: border-box;
                 float:left;
                 padding: 15px;
@@ -272,15 +272,23 @@ main.dash {
                             color: $color-white-secondary;
                             text-transform: uppercase;
                         }
-
+                        .peak,
                         .goal {
                             position: absolute;
                             text-transform: uppercase;
-                            top: 145px;
-                            left: 240px;
                             color: $color-white-secondary;
                             font-weight: 800;
                             font-size: 0.8em;
+                        }
+
+                        .goal {
+                            top: 85px;
+                            left: 265px;
+                        }
+
+                        .peak {
+                            top: 15px;
+                            left: 265px;
                         }
                     }
 
@@ -478,6 +486,41 @@ main.dash {
 
                 .reduction_metrics {
 
+                    svg {
+                       .axis path,
+                       .axis line {
+                           fill: none;
+                           stroke: #7B8B8B;
+                           shape-rendering: crispEdges;
+                       }
+
+                       .axis text {
+                            fill: #7B8B8B;
+                       }
+
+                       .percentage-bar {
+                            opacity: 0.8;
+                            stroke-width: 1.5px;
+                            stroke: darken($color-green-money, 5%);
+                       }
+                       
+
+                    }
+                    .reduction_metrics--lastmonthcontainer,
+                    .reduction_metrics--thismonthcontainer {
+                        width: 50%;
+                        float: left;
+                        text-align: center;
+
+                        h4 {
+                            margin-top: 20%;
+                            margin-bottom: 0px;
+                        }
+                    }
+
+                    .reduction_metrics--lastmonthcontainer {
+                        
+                    }
                 }
             }
         }

@@ -1,43 +1,43 @@
 [
     {
     "hour": "8AM",
-    "consumption": 1764191,
-    "max": 1964191, 
-    "min": 1464191
+    "consumption": 130,
+    "max": 145, 
+    "min": 125
   },
     {
     "hour": "9AM",
-    "consumption": 1664191,
-    "max": 1665591, 
-    "min": 1564191
+    "consumption": 135,
+    "max": 136, 
+    "min": 126
   },
     {
     "hour": "10AM",
-    "consumption": 1764191,
-    "max": 1864191, 
-    "min": 1564191
+    "consumption": 150,
+    "max": 151, 
+    "min": 133
   },
     {
     "hour": "11AM",
-    "consumption": 1464191,
-    "max": 1404191, 
-    "min": 1294191
+    "consumption": 155,
+    "max": 155, 
+    "min": 145
   },
     {
     "hour": "12PM",
-    "consumption": 1664191,
-    "max": 1704191, 
-    "min": 1264191
+    "consumption": 150,
+    "max": 151, 
+    "min": 145
   },
     {
     "hour": "1PM",
-    "consumption": 1864191,
-    "max": 1984191, 
-    "min": 1824191
+    "consumption": 160,
+    "max": 161, 
+    "min": 155
   },
   {
     "hour": "2PM",
-    "consumption": 641910,
-    "current": 1264191
+    "consumption": 122,
+    "current": 145
   }
 ]

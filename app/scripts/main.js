@@ -84,6 +84,86 @@
             });
     }
 
+    function makePercentageMeter(selector, percentage){
+        // Green Meter
+        var meter = { 
+            width: 50, 
+            height: 150,
+            margin: {
+                left: 50,
+                right: 25,
+                top: 30,
+                bottom: 5
+            }
+        };
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, meter.width], .1);
+
+        var y = d3.scale.linear()
+            .range([meter.height, 0]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient('bottom');
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient('left')
+            .ticks(2)
+            .tickFormat(d3.format('%'));
+
+        var svg = d3.select(selector)
+                .attr("width", meter.width + meter.margin.left + meter.margin.right)
+                .attr("height", meter.height + meter.margin.top + meter.margin.bottom)
+            .append("g")
+                .attr("transform", "translate(" + meter.margin.left + "," + meter.margin.top + ")");
+
+        x.domain(['Reduction']);
+        y.domain([ 0, 1]);
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+        var bar = svg.selectAll('percentage-bar').data([12]).enter();
+        bar.append('rect')
+            .attr('class', 'percentage-bar')
+            .attr('x', function(){ return x('Efficiency'); })
+            .attr('width', x.rangeBand())
+            .attr('y', function(){ return y(percentage / 100) })
+            .attr('fill', colors.money)
+            .attr('height', function(d){ 
+                return meter.height - y(percentage / 100);
+            });
+
+        var lineGroup = svg.append('g')
+            .attr('transform', 'translate(0, 0)');
+
+        var currentLine = d3.svg.line()
+                    .x(function (d) {return d})
+                    .y(function (d) {return y(percentage / 100)});
+
+        var startLine = d3.svg.line()
+                    .x(function (d) {return d})
+                    .y(function (d) {return y(0)});
+
+        var linePath = lineGroup.append('path')
+            .datum([x('Reduction') - 20, x('Reduction') + 50])
+            .attr('class', 'reduction_chart--line')
+            .attr('d', startLine)
+            .attr('fill', 'none')
+            .attr('stroke', colors.blue)
+            .attr('stroke-width', '5px')
+            .attr('marker-start', 'url(#marker_triangle--start)')
+            .attr('marker-end', 'url(#marker_triangle--end)');
+
+        linePath.transition()
+            .ease('linear')
+            .duration(3500)
+            .attr('d', currentLine);      
+    }
+
     function makeKwMeter(){
         // Green Meter
         var greenMeter = { 
@@ -96,7 +176,7 @@
                 bottom: 10
             }
         };
-        var goals = {current: 1264191, good: 1064191, caution: 1500000, danger: 2000000};
+        var goals = {current: 145, good: 155, caution: 170, danger: 200};
         var meterX = d3.scale.ordinal()
             .rangeRoundBands([0, greenMeter.width], .1);
 
@@ -120,7 +200,7 @@
                 .attr("transform", "translate(" + greenMeter.margin.left + "," + greenMeter.margin.top + ")");
 
         meterX.domain(['Efficiency']);
-        meterY.domain([ 0, 2000000]);
+        meterY.domain([ 0, 200]);
 
         // greenMeterSvg.append("g")
         //     .attr("class", "x axis")
@@ -231,13 +311,13 @@
                 if(d.current){
                     var lesser = d.current < d.consumption ? d.current : d.consumption;
 
-                    var mod = Math.round(lesser / 100000);
+                    var mod = Math.round(lesser / 100);
 
-                    return mod > 0 ? Math.floor(mod * 100000) : 0;
+                    return mod > 0 ? Math.floor(mod * 100) : 0;
                 }
 
                 return d.min;
-            }), d3.max(data, function(d) { return d.max + 100000 })]);
+            }), d3.max(data, function(d) { return d.max + 10 })]);
 
           svg.append("g")
               .attr("class", "x axis")
@@ -283,7 +363,7 @@
 
             var goalLine = d3.svg.line()
                 .x(function (d) {return x(d.hour)})
-                .y(function (d) {return y(100000)});
+                .y(function (d) {return y(145)});
 
             lineGroup.append('line')
                 .attr('fill', 'none')
@@ -292,11 +372,22 @@
                 .attr('stroke-width', '3px')
                 .attr('x1', function () { return x('0')})
                 .attr('x2', function () {return x('2PM')})
-                .attr('y1', function () {return y(1064200)})
-                .attr('y2', function () {return y(1064200)})
+                .attr('y1', function () {return y(145)})
+                .attr('y2', function () {return y(145)})
                 .attr('dx', function () {return '100'})
-                .attr('clip-path', 'url(#usage-clip)')
-  
+                .attr('clip-path', 'url(#usage-clip)');
+
+            lineGroup.append('line')
+                .attr('fill', 'none')
+                .attr('stroke', colors.yellow)
+                .attr('stroke-dasharray', '15, 15')
+                .attr('stroke-width', '3px')
+                .attr('x1', function () { return x('0')})
+                .attr('x2', function () {return x('2PM')})
+                .attr('y1', function () {return y(165)})
+                .attr('y2', function () {return y(165)})
+                .attr('dx', function () {return '100'})
+                .attr('clip-path', 'url(#usage-clip)');
         });
 
         var metaMeter = d3.select('#usage_meta--meter')
@@ -348,8 +439,9 @@
         makeKwMeter()
     }
 
-    function BuildReductionMeter(){
-        
+    function BuildReductionMeters(){
+        makePercentageMeter('.reduction_metrics--lastmonth', 35);
+        makePercentageMeter('.reduction_metrics--thismonth', 55);
     }
 
     function init(){
@@ -412,7 +504,8 @@
                     break;
             }
         });
-
+    
+        BuildReductionMeters();
         BuildUseageChart();
     }
 

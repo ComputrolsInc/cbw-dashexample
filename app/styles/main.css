@@ -2399,7 +2399,7 @@ main.dash {
       min-height: 50px; }
       /* line 81, stdin */
       main.dash .dash_interchanging .dash_interchanging--nav .label {
-        background-color: #BCD5D5;
+        background-color: #7B8B8B;
         box-sizing: border-box;
         float: left;
         padding: 15px;
@@ -2546,51 +2546,58 @@ main.dash {
             color: #BCD5D5;
             text-transform: uppercase; }
           /* line 276, stdin */
+          main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer .usage_chart--description .peak,
           main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer .usage_chart--description .goal {
             position: absolute;
             text-transform: uppercase;
-            top: 145px;
-            left: 240px;
             color: #BCD5D5;
             font-weight: 800;
             font-size: 0.8em; }
-        /* line 289, stdin */
+          /* line 284, stdin */
+          main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer .usage_chart--description .goal {
+            top: 85px;
+            left: 265px; }
+          /* line 289, stdin */
+          main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer .usage_chart--description .peak {
+            top: 15px;
+            left: 265px; }
+        /* line 297, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer svg.usage_chart--actual .usage_chart--bar {
           fill: rgba(255, 127, 0, 0.8);
           opacity: 0.9;
           stroke: rgba(255, 127, 0, 0.8);
           stroke-width: 2.5px; }
-        /* line 297, stdin */
+        /* line 305, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer svg.usage_chart--actual .x.axis,
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer svg.usage_chart--actual .y.axis {
           fill: #666666; }
-          /* line 298, stdin */
+          /* line 306, stdin */
           main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer svg.usage_chart--actual .x.axis .tick .domain,
           main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer svg.usage_chart--actual .y.axis .tick .domain {
             stroke-width: 5px; }
-        /* line 307, stdin */
+        /* line 315, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer svg.usage_chart--actual .axis path,
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--chartcontainer svg.usage_chart--actual .axis line {
           fill: none;
           stroke: #000;
           shape-rendering: crispEdges; }
-      /* line 324, stdin */
+      /* line 332, stdin */
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--metercontainer,
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer {
         float: left;
         box-sizing: border-box; }
-      /* line 329, stdin */
+      /* line 337, stdin */
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--metercontainer {
         padding-top: 10%; }
-      /* line 333, stdin */
+      /* line 341, stdin */
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--metercontainer {
         width: 75%; }
-      /* line 337, stdin */
+      /* line 345, stdin */
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer {
         width: 25%;
         margin-left: -30px;
         padding-top: 8%; }
-        /* line 342, stdin */
+        /* line 350, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer span {
           width: 100%;
           font-size: 0.8em;
@@ -2598,34 +2605,34 @@ main.dash {
           display: block;
           text-align: center;
           margin-bottom: -12px; }
-        /* line 352, stdin */
+        /* line 360, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency text {
           fill: #666666; }
-        /* line 357, stdin */
+        /* line 365, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .axis path,
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .axis line {
           fill: none;
           stroke: #000;
           shape-rendering: crispEdges; }
-        /* line 363, stdin */
+        /* line 371, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .axis .tick .domain {
           fill: none; }
-        /* line 369, stdin */
+        /* line 377, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .usage_meta--bar-green,
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .usage_meta--bar-caution,
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .usage_meta--bar-bad {
           opacity: 0.8;
           stroke-width: 2.5px; }
-        /* line 374, stdin */
+        /* line 382, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .usage_meta--bar-green {
           stroke: #2bb673; }
-        /* line 378, stdin */
+        /* line 386, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .usage_meta--bar-caution {
           stroke: #eaba49; }
-        /* line 382, stdin */
+        /* line 390, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--meta .usage_meta--efficiencycontainer svg.usage_meta--efficiency .usage_meta--bar-bad {
           stroke: red; }
-      /* line 390, stdin */
+      /* line 398, stdin */
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--facts {
         width: 50%;
         margin: 0 auto;
@@ -2633,21 +2640,21 @@ main.dash {
         font-size: 0.9em;
         text-align: center;
         line-height: 0.1em; }
-        /* line 391, stdin */
+        /* line 399, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--facts:before {
           display: block;
           content: ' ';
           visibility: hidden;
           clear: left; }
-        /* line 404, stdin */
+        /* line 412, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--usage .data_usage--facts i {
           margin-top: 15px;
           padding-right: 10px;
           vertical-align: middle; }
-    /* line 412, stdin */
+    /* line 420, stdin */
     main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction {
       min-height: 100%; }
-      /* line 416, stdin */
+      /* line 424, stdin */
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description,
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics {
         width: 50%;
@@ -2655,12 +2662,12 @@ main.dash {
         padding: 15px;
         float: left;
         min-height: 345px; }
-      /* line 424, stdin */
+      /* line 432, stdin */
       main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description {
         box-sizing: border-box;
         position: relative;
         z-index: 10; }
-        /* line 429, stdin */
+        /* line 437, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description .panel {
           background-color: #272727;
           position: absolute;
@@ -2670,45 +2677,70 @@ main.dash {
           border-radius: 5px;
           min-width: 100%;
           min-height: 100%; }
-          /* line 438, stdin */
+          /* line 446, stdin */
           main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description .panel img {
             float: left; }
-          /* line 450, stdin */
+          /* line 458, stdin */
           main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description .panel img {
             padding-top: 48%; }
-          /* line 454, stdin */
+          /* line 462, stdin */
           main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description .panel img:nth-child(1) {
             padding-left: 13px; }
-          /* line 457, stdin */
+          /* line 465, stdin */
           main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description .panel img:nth-child(2), main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description .panel img:nth-child(3) {
             padding-left: 13px; }
-        /* line 465, stdin */
+        /* line 473, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description h4 {
           color: #ededed;
           padding-left: 20px; }
-        /* line 470, stdin */
+        /* line 478, stdin */
         main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_description p {
           padding-left: 20px;
           z-index: 2;
           color: #ededed; }
-  /* line 486, stdin */
+      /* line 491, stdin */
+      main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics svg .axis path,
+      main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics svg .axis line {
+        fill: none;
+        stroke: #7B8B8B;
+        shape-rendering: crispEdges; }
+      /* line 497, stdin */
+      main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics svg .axis text {
+        fill: #7B8B8B; }
+      /* line 501, stdin */
+      main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics svg .percentage-bar {
+        opacity: 0.8;
+        stroke-width: 1.5px;
+        stroke: #097950; }
+      /* line 510, stdin */
+      main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics .reduction_metrics--lastmonthcontainer,
+      main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics .reduction_metrics--thismonthcontainer {
+        width: 50%;
+        float: left;
+        text-align: center; }
+        /* line 515, stdin */
+        main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics .reduction_metrics--lastmonthcontainer h4,
+        main.dash .dash_interchanging .dash_interchanging--container .interchanging_data--reduction .reduction_metrics .reduction_metrics--thismonthcontainer h4 {
+          margin-top: 20%;
+          margin-bottom: 0px; }
+  /* line 529, stdin */
   main.dash .dash_statistics {
     min-height: 250px;
     background-color: #222; }
-    /* line 487, stdin */
+    /* line 530, stdin */
     main.dash .dash_statistics:before {
       height: 10px;
       content: ' ';
       background-image: linear-gradient(90deg, #2296bb 0%, #2296bb 33%, #2296bb 33%, #2bb673 33%, #2bb673 66%, #2bb673 66%, #eaba49 66%, #eaba49 100%);
       display: block; }
-    /* line 501, stdin */
+    /* line 544, stdin */
     main.dash .dash_statistics .statistics_water,
     main.dash .dash_statistics .statistics_green,
     main.dash .dash_statistics .statistics_electricity {
       min-height: 250px;
       width: 32%;
       float: left; }
-      /* line 506, stdin */
+      /* line 549, stdin */
       main.dash .dash_statistics .statistics_water img,
       main.dash .dash_statistics .statistics_green img,
       main.dash .dash_statistics .statistics_electricity img {
@@ -2716,13 +2748,13 @@ main.dash {
         display: block;
         margin: 0 auto;
         height: 60px; }
-      /* line 513, stdin */
+      /* line 556, stdin */
       main.dash .dash_statistics .statistics_water h4,
       main.dash .dash_statistics .statistics_green h4,
       main.dash .dash_statistics .statistics_electricity h4 {
         margin: 5px 0;
         text-align: center; }
-      /* line 520, stdin */
+      /* line 563, stdin */
       main.dash .dash_statistics .statistics_water .statistics_water--container,
       main.dash .dash_statistics .statistics_water .statistics_green--container,
       main.dash .dash_statistics .statistics_water .statistics_electricity--container,
@@ -2734,123 +2766,123 @@ main.dash {
       main.dash .dash_statistics .statistics_electricity .statistics_electricity--container {
         width: 100%;
         text-align: center; }
-    /* line 527, stdin */
+    /* line 570, stdin */
     main.dash .dash_statistics .statistics_water h4 {
       color: #2296bb; }
-    /* line 531, stdin */
+    /* line 574, stdin */
     main.dash .dash_statistics .statistics_water .statistics_water--container {
       position: relative; }
-      /* line 534, stdin */
+      /* line 577, stdin */
       main.dash .dash_statistics .statistics_water .statistics_water--container .container_svg--fill {
         position: absolute;
         top: 110px;
         left: 126px; }
-    /* line 544, stdin */
+    /* line 587, stdin */
     main.dash .dash_statistics .statistics_green h4, main.dash .dash_statistics .statistics_green i {
       color: #2bb673; }
-    /* line 548, stdin */
+    /* line 591, stdin */
     main.dash .dash_statistics .statistics_green span {
       color: #BCD5D5; }
-    /* line 552, stdin */
+    /* line 595, stdin */
     main.dash .dash_statistics .statistics_green i {
       padding-top: 5px; }
-    /* line 555, stdin */
+    /* line 598, stdin */
     main.dash .dash_statistics .statistics_green span, main.dash .dash_statistics .statistics_green i {
       font-size: 2.2em;
       display: block;
       text-align: center; }
-  /* line 580, stdin */
+  /* line 623, stdin */
   main.dash svg.linechart .axis path,
   main.dash svg.linechart .axis line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges; }
-  /* line 586, stdin */
+  /* line 629, stdin */
   main.dash svg.linechart .axis text {
     fill: #666666; }
-  /* line 591, stdin */
+  /* line 634, stdin */
   main.dash svg.linechart .axis .tick line {
     stroke: rgba(0, 0, 0, 0.1); }
-  /* line 597, stdin */
+  /* line 640, stdin */
   main.dash svg.linechart .area {
     stroke-width: 1; }
-  /* line 616, stdin */
+  /* line 659, stdin */
   main.dash svg.linechart .area {
     stroke-width: 1; }
-  /* line 621, stdin */
+  /* line 664, stdin */
   main.dash svg.linechart .area.outer,
   main.dash svg.linechart .legend .outer {
     fill: rgba(230, 230, 255, 0.8);
     stroke: rgba(216, 216, 255, 0.8); }
-  /* line 627, stdin */
+  /* line 670, stdin */
   main.dash svg.linechart .area.inner,
   main.dash svg.linechart .legend .inner {
     fill: rgba(127, 127, 255, 0.8);
     stroke: rgba(96, 96, 255, 0.8); }
-  /* line 633, stdin */
+  /* line 676, stdin */
   main.dash svg.linechart .median-line,
   main.dash svg.linechart .legend .median-line {
     fill: none;
     stroke: #000;
     stroke-width: 3; }
-  /* line 639, stdin */
+  /* line 682, stdin */
   main.dash svg.linechart .legend .legend-bg {
     fill: rgba(0, 0, 0, 0.5);
     stroke: rgba(0, 0, 0, 0.5); }
-  /* line 645, stdin */
+  /* line 688, stdin */
   main.dash svg.linechart .marker.client .marker-bg,
   main.dash svg.linechart .marker.client path {
     fill: rgba(255, 127, 0, 0.8);
     stroke: rgba(255, 127, 0, 0.8);
     stroke-width: 3; }
-  /* line 652, stdin */
+  /* line 695, stdin */
   main.dash svg.linechart .marker.server .marker-bg,
   main.dash svg.linechart .marker.server path {
     fill: rgba(0, 153, 51, 0.8);
     stroke: rgba(0, 153, 51, 0.8);
     stroke-width: 3; }
-  /* line 658, stdin */
+  /* line 701, stdin */
   main.dash svg.linechart .marker path {
     fill: none; }
-  /* line 663, stdin */
+  /* line 706, stdin */
   main.dash svg.linechart .legend text,
   main.dash svg.linechart .marker text {
     fill: #fff;
     font-weight: bold; }
-  /* line 668, stdin */
+  /* line 711, stdin */
   main.dash svg.linechart .marker text {
     text-anchor: middle; }
 
-/* line 674, stdin */
+/* line 717, stdin */
 main.savings {
   width: 75%;
   margin: 0 auto;
   min-height: 750px;
   background-color: #2f2f2f; }
-  /* line 681, stdin */
+  /* line 724, stdin */
   main.savings:before {
     height: 10px;
     content: ' ';
     background-image: linear-gradient(90deg, #0b9160 0%, #0b9160 100%);
     display: block; }
-  /* line 688, stdin */
+  /* line 731, stdin */
   main.savings .savings_appbar {
     min-height: 75px;
     background-color: #2f2f2f;
     border-bottom: 2px solid #BCD5D5; }
-    /* line 693, stdin */
+    /* line 736, stdin */
     main.savings .savings_appbar .savings_appbar--logo {
       width: 10%;
       float: left; }
-      /* line 696, stdin */
+      /* line 739, stdin */
       main.savings .savings_appbar .savings_appbar--logo img {
         height: 65px; }
-    /* line 701, stdin */
+    /* line 744, stdin */
     main.savings .savings_appbar .savings_appbar--location {
       box-sizing: border-box;
       float: left;
       width: 90%; }
-      /* line 710, stdin */
+      /* line 753, stdin */
       main.savings .savings_appbar .savings_appbar--location .location_name,
       main.savings .savings_appbar .savings_appbar--location .location_occupants,
       main.savings .savings_appbar .savings_appbar--location .location_date {
@@ -2862,119 +2894,119 @@ main.savings {
         box-sizing: border-box;
         text-align: center;
         font-size: 1.1em; }
-        /* line 719, stdin */
+        /* line 762, stdin */
         main.savings .savings_appbar .savings_appbar--location .location_name i,
         main.savings .savings_appbar .savings_appbar--location .location_occupants i,
         main.savings .savings_appbar .savings_appbar--location .location_date i {
           margin-right: 5px; }
-  /* line 726, stdin */
+  /* line 769, stdin */
   main.savings .savings_data {
     width: 100%;
     min-height: 155px; }
-    /* line 732, stdin */
+    /* line 775, stdin */
     main.savings .savings_data .savings_iconheader,
     main.savings .savings_data .savings_price,
     main.savings .savings_data .savings_total {
       width: 33%;
       float: left;
       min-height: 160px; }
-    /* line 740, stdin */
+    /* line 783, stdin */
     main.savings .savings_data .savings_price,
     main.savings .savings_data .savings_total {
       color: #BCD5D5; }
-      /* line 743, stdin */
+      /* line 786, stdin */
       main.savings .savings_data .savings_price span,
       main.savings .savings_data .savings_total span {
         display: block;
         text-align: center;
         vertical-align: middle; }
-      /* line 749, stdin */
+      /* line 792, stdin */
       main.savings .savings_data .savings_price span:nth-child(1),
       main.savings .savings_data .savings_total span:nth-child(1) {
         font-size: 1.8em;
         padding-top: 55px; }
-      /* line 754, stdin */
+      /* line 797, stdin */
       main.savings .savings_data .savings_price span:nth-child(2),
       main.savings .savings_data .savings_total span:nth-child(2) {
         text-transform: uppercase; }
-    /* line 762, stdin */
+    /* line 805, stdin */
     main.savings .savings_data .savings_iconheader--svg text,
     main.savings .savings_data .savings_price--svg text,
     main.savings .savings_data .savings_total--svg text {
       font-size: 18px; }
-    /* line 766, stdin */
+    /* line 809, stdin */
     main.savings .savings_data .savings_iconheader--svg text.label,
     main.savings .savings_data .savings_price--svg text.label,
     main.savings .savings_data .savings_total--svg text.label {
       font-size: 16px; }
-    /* line 777, stdin */
+    /* line 820, stdin */
     main.savings .savings_data .savings_iconheader--svg text {
       fill: #0b9160; }
-    /* line 783, stdin */
+    /* line 826, stdin */
     main.savings .savings_data .savings_price--svg text {
       fill: #0b9160; }
-    /* line 789, stdin */
+    /* line 832, stdin */
     main.savings .savings_data .savings_total--svg text {
       fill: #0b9160; }
-  /* line 795, stdin */
+  /* line 838, stdin */
   main.savings .savings_container {
     margin: 35px;
     margin-top: 10px;
     text-align: center;
     background-color: #2f2f2f;
     position: relative; }
-    /* line 802, stdin */
+    /* line 845, stdin */
     main.savings .savings_container .savings_legend {
       width: 50%;
       margin: 0 auto;
       text-align: center; }
-      /* line 808, stdin */
+      /* line 851, stdin */
       main.savings .savings_container .savings_legend .legend_explanation--line,
       main.savings .savings_container .savings_legend .legend_explanation--green,
       main.savings .savings_container .savings_legend .legend_explanation--red {
         color: #BCD5D5; }
-      /* line 812, stdin */
+      /* line 855, stdin */
       main.savings .savings_container .savings_legend .legend_explanation--line .color {
         color: steelblue; }
-      /* line 816, stdin */
+      /* line 859, stdin */
       main.savings .savings_container .savings_legend .legend_explanation--green .color {
         color: #0b9160; }
-      /* line 820, stdin */
+      /* line 863, stdin */
       main.savings .savings_container .savings_legend .legend_explanation--red .color {
         color: red; }
-    /* line 825, stdin */
+    /* line 868, stdin */
     main.savings .savings_container .savings_header {
       font-size: 1.3em;
       position: absolute;
       color: #BCD5D5;
       left: 325px;
       top: 35px; }
-  /* line 836, stdin */
+  /* line 879, stdin */
   main.savings svg.savings_chart .x.axis,
   main.savings svg.savings_chart .y.axis {
     fill: #097950; }
-  /* line 842, stdin */
+  /* line 885, stdin */
   main.savings svg.savings_chart .axis path,
   main.savings svg.savings_chart .axis line {
     fill: none;
     stroke: #000;
     stroke-width: 1.5px;
     shape-rendering: crispEdges; }
-  /* line 849, stdin */
+  /* line 892, stdin */
   main.savings svg.savings_chart .savings_svg--bar {
     fill: rgba(255, 127, 0, 0.8); }
-  /* line 855, stdin */
+  /* line 898, stdin */
   main.savings svg.savings_chart .savings_svg--efficiency .efficiency_bar.good,
   main.savings svg.savings_chart .savings_svg--efficiency .efficiency_label.good {
     fill: #0b9160; }
-  /* line 860, stdin */
+  /* line 903, stdin */
   main.savings svg.savings_chart .savings_svg--efficiency .efficiency_bar.bad,
   main.savings svg.savings_chart .savings_svg--efficiency .efficiency_label.bad {
     fill: red; }
-  /* line 864, stdin */
+  /* line 907, stdin */
   main.savings svg.savings_chart .savings_svg--efficiency .efficiency_label.bad {
     stroke: red; }
-  /* line 868, stdin */
+  /* line 911, stdin */
   main.savings svg.savings_chart .savings_svg--efficiency .efficiency_label {
     stroke: #BCD5D5; }
 
