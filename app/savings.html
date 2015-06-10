@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CBAS Realtime Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CBAS Web Dashboard</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="text/javascript" src="scripts/d3.min.js"></script>
+  </head>
+  <body>
+
+    <main class="savings">
+        <div class="savings_appbar">
+            <div class="savings_appbar--logo">
+                <img src="images/3dlogo.png" alt="Computrols" />    
+            </div>
+            
+            <div class="savings_appbar--location">
+                <span class="location_name"><i class="icon icon-building"></i>Playa Vista Bldg #1</span>
+                <span class="location_occupants"><i class="icon icon-users"></i>575 Occupants</span>
+                <span class="location_date"><i class="icon icon-calendar"></i>June 16th, 2015</span>
+            </div>
+        </div>
+        <!-- Header / Price Per kW/Hr / Total Savings -->
+        <div class="savings_data">
+            <div class="savings_iconheader">
+                <svg class="savings_iconheader--svg">
+                    <image x="128" y="35" width="60" height="60" xlink:href="images/DashboardIconscolor_Dollarsign.png"></image>
+                    <text x="128" y="110">Savings</text>
+                </svg>
+            </div>
+            <div class="savings_total">
+                <span class="total_data">$7,525.13</span>
+                <span class="total_label">Total Savings</span>
+            </div>
+            <div class="savings_price">
+                <span class="price_data">15.2c</span>
+                <span class="price_label">Price per kWh</span>
+            </div>
+        </div>
+
+        <!-- CHART SVG -->
+        <div class="savings_container">
+<!--             <div class="savings_legend">
+                <p class="legend_explanation--line"><span class="color">Blue</span>&nbsp;markers represent the dollars saved last month.</p>
+                <p class="legend_explanation--green"><span class="color">Green</span>&nbsp;bars represent an <span class="color">increase</span> in dollars saved from last month.</p>
+                <p class="legend_explanation--red"><span class="color">Red</span>&nbsp;bars represent a <span class="color">decrease</span> in dollars saved from last month.</p>
+            </div> -->
+            <span class="savings_header">Last Month vs. This Month</span>
+            <svg class="savings_chart" width="100%" height="250">
+                <defs>
+                    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+                        <circle cx="5" cy="5" r="3" style="stroke: none; fill:steelblue;"/>
+                    </marker>
+                </circle>
+            </svg>
+        </div>
+    </main>
+    <script type='text/javascript' id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.7.6.js'><\/script>".replace("HOST", location.hostname));
+    //]]></script>
+    <script type="text/javascript" src="scripts/savings.js"></script>
+    <script type="text/javascript" src="scripts/saved.js"></script>
+  </body>
+</html>
